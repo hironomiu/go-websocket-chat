@@ -7,6 +7,12 @@ deps:
 setup:
 		dep ensure
 
+build:
+		go build -o chat
+
+server:
+		./chat -addr=$(host)
+
 ## Build godoc server(http://localhost:6060)
 godoc_server:
 		godoc -http=$(godoc_host)
